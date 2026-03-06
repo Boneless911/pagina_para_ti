@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family: 'Segoe UI', sans-serif;
+
+background: linear-gradient(135deg,#e9d5ff,#d8b4fe,#c084fc);
+overflow:hidden;
+color:#4c1d95;
+text-align:center;
+}
+
+.container{
+max-width:700px;
+padding:40px;
+background:rgba(255,255,255,0.15);
+border-radius:20px;
+backdrop-filter: blur(10px);
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+animation: aparecer 2s ease;
+}
+
+h1{
+font-size:32px;
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+line-height:1.6;
+}
+
+.flor{
+position:absolute;
+font-size:30px;
+animation: flotar 10s linear infinite;
+opacity:0.7;
+}
+
+@keyframes flotar{
+0%{
+transform: translateY(100vh) rotate(0deg);
+}
+100%{
+transform: translateY(-100vh) rotate(360deg);
+}
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform: translateY(30px);
+}
+to{
+opacity:1;
+transform: translateY(0);
+}
+}
+
+.boton{
+margin-top:30px;
+padding:12px 25px;
+background:white;
+color:#7e22ce;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.boton:hover{
+transform:scale(1.05);
+}
+
+.oculto{
+display:none;
+margin-top:20px;
+font-size:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dicen que los hombres no se fijan en los pequeños detalles…</h1>
+
+<p>
+Pero hay un aroma que siempre me recuerda a ti.
+</p>
+
+<p>
+Ese aroma suave, delicado… imposible de olvidar.
+</p>
+
+<button class="boton" onclick="mostrar()">Haz clic aquí</button>
+
+<p class="oculto" id="mensaje">
+Cada vez que lo recuerdo es como si estuvieras cerca.  
+<br><br>
+💜 Feliz Día de la Mujer 💜
+</p>
+
+</div>
+
+<div class="flor" style="left:10%">🌸</div>
+<div class="flor" style="left:25%">🌷</div>
+<div class="flor" style="left:40%">🌸</div>
+<div class="flor" style="left:60%">🌷</div>
+<div class="flor" style="left:75%">🌸</div>
+<div class="flor" style="left:90%">🌷</div>
+
+<script>
+
+function mostrar(){
+document.getElementById("mensaje").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
